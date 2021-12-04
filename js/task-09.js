@@ -29,13 +29,9 @@ console.log(refs.color);
 console.log(refs.mutableElement);
 
 const onChangeColor = (event) => {
-  refs.mutableElement.style.backgroundColor = `#${Math.floor(
-    Math.random() * 16777215
-  ).toString(16)}`;
+  refs.mutableElement.style.backgroundColor = getRandomHexColor();
 
-  refs.color.textContent = `#${Math.floor(Math.random() * 16777215).toString(
-    16
-  )}`;
+  refs.color.textContent = getRandomHexColor();
 };
 
 refs.btnChangeColor.addEventListener("click", onChangeColor);
